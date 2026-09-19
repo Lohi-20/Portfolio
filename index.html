@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puvvada Lakshmi Lohitha – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f6fb;--bg2:#e6eef7;--card:rgba(255,255,255,.72);--line:rgba(16,58,85,.12);--tx:#0a1e2e;--tx2:#37556e;--ac:#1e6aa3;--ac2:#0f8fbf;--warm:#e08a1e;--glow:rgba(30,106,163,.22);--sh:0 20px 50px -20px rgba(10,40,70,.28);--code:#0c1c2b;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07121c;--bg2:#0d1e2d;--card:rgba(20,40,58,.62);--line:rgba(140,190,230,.14);--tx:#e8f1f9;--tx2:#9fbdd3;--ac:#4aa8e8;--ac2:#3fd0e0;--warm:#ffb454;--glow:rgba(74,168,232,.25);--sh:0 20px 50px -20px rgba(0,0,0,.7);--code:#050d15;}}
+:root[data-theme="dark"]{--bg:#07121c;--bg2:#0d1e2d;--card:rgba(20,40,58,.62);--line:rgba(140,190,230,.14);--tx:#e8f1f9;--tx2:#9fbdd3;--ac:#4aa8e8;--ac2:#3fd0e0;--warm:#ffb454;--glow:rgba(74,168,232,.25);--sh:0 20px 50px -20px rgba(0,0,0,.7);--code:#050d15;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
+body{background:var(--bg);color:var(--tx);font:400 1rem/1.65 Inter,system-ui,sans-serif;overflow-x:hidden;transition:background .4s,color .4s}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;letter-spacing:-.025em;line-height:1.1}
+:focus-visible{outline:2px solid var(--ac2);outline-offset:3px;border-radius:8px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--warm));z-index:200}
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;animation:drift 18s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:46vw;height:46vw;background:var(--ac);top:-14vw;left:-10vw;opacity:.28}
+.aurora i:nth-child(2){width:38vw;height:38vw;background:var(--ac2);bottom:-12vw;right:-8vw;opacity:.22;animation-delay:-6s}
+.aurora i:nth-child(3){width:24vw;height:24vw;background:var(--warm);top:40%;left:55%;opacity:.13;animation-delay:-11s}
+@keyframes drift{to{transform:translate(6vw,4vw) scale(1.15)}}
+.aurora::after{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 75%)}
+nav{position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:100;display:flex;align-items:center;gap:.3rem;padding:.4rem .5rem;background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:99px;box-shadow:var(--sh);max-width:calc(100vw - 1.5rem)}
+nav .brand{font:700 .95rem 'Space Grotesk',sans-serif;padding:.4rem .9rem;border-radius:99px;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff}
+nav .links{display:flex;gap:.1rem;overflow-x:auto;scrollbar-width:none}
+nav a.l{color:var(--tx2);text-decoration:none;font-size:.85rem;font-weight:500;padding:.45rem .85rem;border-radius:99px;transition:.25s;white-space:nowrap}
+nav a.l:hover,nav a.l.on{color:var(--tx);background:var(--bg2)}
+#tg{border:0;background:var(--bg2);color:var(--tx);width:34px;height:34px;border-radius:50%;cursor:pointer;display:grid;place-items:center;flex-shrink:0;transition:.3s}
+#tg:hover{transform:rotate(25deg);color:var(--warm)}
+#tg svg{width:17px;height:17px}
+main{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+section{padding:5.5rem 0 1rem}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:7rem 0 3rem}
+.hi{display:inline-flex;align-items:center;gap:.6rem;font-size:.85rem;font-weight:500;color:var(--tx2);border:1px solid var(--line);background:var(--card);padding:.4rem .95rem;border-radius:99px;margin-bottom:1.6rem}
+.hi b{width:8px;height:8px;border-radius:50%;background:#2fcf7a;box-shadow:0 0 0 0 rgba(47,207,122,.6);animation:ping 2s infinite}
+@keyframes ping{70%,100%{box-shadow:0 0 0 9px rgba(47,207,122,0)}}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:700}
+.hero h1 span{display:block;background:linear-gradient(100deg,var(--ac),var(--ac2) 55%,var(--warm));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:sheen 8s linear infinite}
+@keyframes sheen{to{background-position:200% center}}
+.role{font:500 clamp(1.1rem,2.4vw,1.5rem) 'Space Grotesk',sans-serif;margin:1.4rem 0 1rem;color:var(--tx2);min-height:2rem}
+.role em{font-style:normal;color:var(--tx)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--warm);margin-left:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{max-width:34rem;color:var(--tx2)}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;padding:.85rem 1.5rem;border-radius:14px;font-weight:600;font-size:.92rem;text-decoration:none;transition:.3s;border:1px solid var(--line)}
+.btn.p{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border:0;box-shadow:0 12px 28px -10px var(--glow)}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 18px 34px -10px var(--ac)}
+.btn.s{color:var(--tx);background:var(--card)}
+.btn.s:hover{border-color:var(--ac);transform:translateY(-3px)}
+.term{background:var(--code);border-radius:20px;border:1px solid var(--line);box-shadow:var(--sh),0 0 80px -30px var(--ac);overflow:hidden;transform:perspective(1000px) rotateY(-6deg) rotateX(2deg);transition:transform .5s}
+.term:hover{transform:none}
+.term .bar{display:flex;gap:7px;padding:.85rem 1rem;background:rgba(255,255,255,.05)}
+.term .bar i{width:11px;height:11px;border-radius:50%}
+.term .bar i:nth-child(1){background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
+.term pre{padding:1.3rem 1.4rem 1.6rem;font:.83rem/1.85 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#b9d4e8;white-space:pre-wrap;min-height:20rem}
+.k{color:#6cc3f5}.s2{color:#ffc978}.n{color:#7ee6a6}.c{color:#5d7d94}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1rem}
+.stat{padding:1.3rem 1.4rem;background:var(--card);border:1px solid var(--line);border-radius:20px;backdrop-filter:blur(10px)}
+.stat b{display:block;font:700 2.4rem 'Space Grotesk',sans-serif;background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:.85rem;color:var(--tx2)}
+.head{margin-bottom:2.2rem}
+.head h2{font-size:clamp(2rem,4.5vw,3rem)}
+.head p{color:var(--tx2);margin-top:.6rem;max-width:32rem}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.6rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:var(--ac);box-shadow:var(--sh)}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.card h3{font-size:1.15rem;margin-bottom:.9rem}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.bento .card:nth-child(1){grid-column:span 3}.bento .card:nth-child(2){grid-column:span 3}
+.bento .card:nth-child(3){grid-column:span 2}.bento .card:nth-child(4){grid-column:span 2}.bento .card:nth-child(5){grid-column:span 2}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{font-size:.8rem;font-weight:500;padding:.38rem .9rem;border-radius:99px;background:var(--bg2);border:1px solid var(--line);color:var(--tx);transition:.25s}
+.tag:hover{background:var(--ac);color:#fff;border-color:var(--ac);transform:translateY(-2px)}
+.tl{position:relative;display:grid;gap:1.2rem;padding-left:2.2rem}
+.tl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--ac),var(--ac2),transparent)}
+.tl .card::after{content:"";position:absolute;left:-2.2rem;top:1.9rem;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--ac2);box-shadow:0 0 0 5px var(--glow)}
+.tl .card{overflow:visible}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.5rem}
+.pill{font-size:.75rem;font-weight:600;padding:.25rem .8rem;border-radius:99px;background:var(--bg2);color:var(--ac)}
+.org{color:var(--ac);font-weight:600;font-size:.9rem;margin:.3rem 0 .8rem}
+ul.pts{list-style:none;display:grid;gap:.45rem;color:var(--tx2);font-size:.93rem}
+ul.pts li{padding-left:1.3rem;position:relative}
+ul.pts li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--warm);transform:rotate(45deg)}
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.proj .card{display:flex;flex-direction:column;transform-style:preserve-3d;will-change:transform}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,var(--bg2),var(--card));border:1px solid var(--line);margin-bottom:1.1rem}
+.proj .tags{margin-top:auto;padding-top:1.2rem}
+.edu{display:grid;grid-template-columns:1.2fr 1fr;gap:1.2rem}
+.cg{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+.ring{position:relative;width:132px;height:132px;flex-shrink:0}
+.ring svg{transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:10;stroke-linecap:round}
+.ring .bg{stroke:var(--bg2)}
+.ring .fg{stroke:url(#g);stroke-dasharray:352;stroke-dashoffset:352;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:700 1.7rem 'Space Grotesk',sans-serif}
+.bars{display:grid;gap:1.3rem}
+.bar2 div{display:flex;justify-content:space-between;font-weight:600;font-size:.92rem;margin-bottom:.4rem}
+.bar2 small{display:block;color:var(--tx2);font-weight:400;font-size:.82rem}
+.bar2 .t{height:8px;background:var(--bg2);border-radius:9px;overflow:hidden}
+.bar2 .t i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ac),var(--ac2));transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.item{display:flex;gap:.9rem;align-items:center;padding:.85rem 1rem;border-radius:14px;background:var(--bg2);margin-bottom:.7rem;font-size:.92rem;font-weight:500;transition:.25s}
+.item:hover{transform:translateX(5px);background:var(--glow)}
+.item span{font-size:1.2rem}
+footer{text-align:center;color:var(--tx2);font-size:.85rem;padding:5rem 0 3rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:980px){.hero{grid-template-columns:1fr;min-height:auto}.term{transform:none}.proj{grid-template-columns:1fr 1fr}.edu,.two{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.bento .card:nth-child(n){grid-column:span 3}}
+@media (max-width:640px){main{padding:0 1rem}.proj{grid-template-columns:1fr}.bento .card:nth-child(n){grid-column:span 6}nav .brand{display:none}nav a.l{padding:.45rem .6rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media print{.aurora,nav,#bar,#tg{display:none}.rv{opacity:1;transform:none}.card{break-inside:avoid;backdrop-filter:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="aurora"><i></i><i></i><i></i></div>
+
+<nav>
+  <span class="brand">PLL</span>
+  <div class="links">
+    <a class="l" href="#skills">Skills</a><a class="l" href="#experience">Experience</a><a class="l" href="#projects">Projects</a><a class="l" href="#education">Education</a><a class="l" href="#credentials">Credentials</a>
+  </div>
+  <button id="tg" aria-label="Toggle light and dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path id="ti" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+</nav>
+
+<main>
+<header class="hero" id="top">
+  <div>
+    <div class="hi"><b></b> Final-year CSE student, batch of 2027</div>
+    <h1>Puvvada Lakshmi <span>Lohitha</span></h1>
+    <p class="role">I'm a <em id="typed"></em><span class="caret"></span></p>
+    <p class="lead">I build web apps with Python, train machine learning models, and wire up IoT projects. Always picking up the next technology.</p>
+    <div class="cta"><a class="btn p" href="#projects">See my projects</a><a class="btn s" href="#experience">View experience</a></div>
+  </div>
+  <div class="term" aria-label="Profile summary">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <pre id="code"></pre>
+  </div>
+  <div class="stats" style="grid-column:1/-1">
+    <div class="stat"><b data-n="8.24" data-d="2">0</b><span>CGPA at JNTU Kakinada</span></div>
+    <div class="stat"><b data-n="3">0</b><span>Virtual internships</span></div>
+    <div class="stat"><b data-n="3">0</b><span>Projects built</span></div>
+    <div class="stat"><b data-n="3">0</b><span>Certifications earned</span></div>
+  </div>
+</header>
+
+<section id="skills">
+  <div class="head rv"><h2>Skills and tools</h2><p>What I use to build things, from first line of code to deployment.</p></div>
+  <div class="bento rv">
+    <div class="card"><h3>💻 Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">Java (basics)</span></div></div>
+    <div class="card"><h3>🌐 Web technologies</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript (basics)</span><span class="tag">Node.js (basics)</span></div></div>
+    <div class="card"><h3>🗄️ Databases</h3><div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span></div></div>
+    <div class="card"><h3>🧠 Core concepts</h3><div class="tags"><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">DBMS</span><span class="tag">OOPs</span></div></div>
+    <div class="card"><h3>🛠️ Tools</h3><div class="tags"><span class="tag">VS Code</span><span class="tag">Google Colab</span></div></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="head rv"><h2>Internship experience</h2><p>Hands-on work across full stack development, machine learning and cloud.</p></div>
+  <div class="tl rv">
+    <div class="card"><div class="row"><h3>Full Stack Development with Python</h3><span class="pill">2 months</span></div><div class="org">DataValley, virtual internship</div>
+      <ul class="pts"><li>Built web applications using Python and Flask.</li><li>Developed interfaces using HTML, CSS, and JavaScript.</li><li>Worked with SQL databases.</li></ul></div>
+    <div class="card"><div class="row"><h3>AI &amp; Machine Learning Virtual Intern</h3><span class="pill">Virtual</span></div><div class="org">EduSkills</div>
+      <ul class="pts"><li>Built machine learning models using Python.</li><li>Performed data preprocessing and analysis.</li><li>Used Scikit-learn for model development.</li></ul></div>
+    <div class="card"><div class="row"><h3>Cloud Virtual Internship</h3><span class="pill">Virtual</span></div><div class="org">EduSkills</div>
+      <ul class="pts"><li>Learned cloud computing fundamentals.</li><li>Explored AWS cloud services and virtualization.</li><li>Understood cloud deployment concepts.</li></ul></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="head rv"><h2>Projects</h2><p>Ideas turned into working systems, from sensors to machine learning.</p></div>
+  <div class="proj rv">
+    <div class="card tilt"><div class="ico">🌊</div><h3>Automated Drainage System using IoT</h3>
+      <ul class="pts"><li>Built an automated drainage monitoring system using Arduino.</li><li>Used sensors for real-time monitoring.</li><li>Developed a web interface for system control.</li></ul>
+      <div class="tags"><span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">Web</span></div></div>
+    <div class="card tilt"><div class="ico">🦟</div><h3>AI-Driven Environmental Risk Mapping for Mosquito Control</h3>
+      <ul class="pts"><li>Analyzed environmental data using Python.</li><li>Built a machine learning model to identify risk areas.</li><li>Predicted potential mosquito breeding zones.</li></ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Machine learning</span></div></div>
+    <div class="card tilt"><div class="ico">🏫</div><h3>School Management System</h3>
+      <ul class="pts"><li>Developed a system to manage student and school information.</li><li>Implemented features for student records and data management.</li><li>Designed an interface for efficient school administration.</li></ul>
+      <div class="tags"><span class="tag">Data management</span><span class="tag">UI design</span></div></div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="head rv"><h2>Education</h2><p>A steady academic record from school to B.Tech.</p></div>
+  <div class="edu rv">
+    <div class="card"><h3>B.Tech in Computer Science &amp; Engineering</h3>
+      <div class="cg">
+        <div class="ring"><svg viewBox="0 0 132 132" width="132" height="132"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4aa8e8"/><stop offset="1" stop-color="#e08a1e"/></linearGradient></defs><circle class="bg" cx="66" cy="66" r="56"/><circle class="fg" id="fg" cx="66" cy="66" r="56" data-v="8.24"/></svg><b>8.24</b></div>
+        <div><p style="font-weight:600">Swarnandhra College of Engineering &amp; Technology</p><p style="color:var(--tx2);font-size:.92rem">JNTU Kakinada<br>2023 to 2027, CGPA out of 10</p></div>
+      </div></div>
+    <div class="card bars">
+      <div class="bar2"><div><span>Intermediate (MPC)</span><span>87.4%</span></div><small>Aditya Junior College, Palakollu</small><div class="t" style="display:block;margin-top:.5rem"><i data-w="87.4"></i></div></div>
+      <div class="bar2"><div><span>Secondary School Certificate</span><span>95.1%</span></div><small>Aditya School, Palakollu</small><div class="t" style="display:block;margin-top:.5rem"><i data-w="95.1"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="head rv"><h2>Credentials and strengths</h2></div>
+  <div class="two rv">
+    <div class="card"><h3>Certifications</h3>
+      <div class="item"><span>🎓</span>NPTEL: Artificial Intelligence (AI) for Management</div>
+      <div class="item"><span>☁️</span>Oracle: Agentic AI Certified Foundations Associate</div>
+      <div class="item"><span>🌐</span>Cisco Networking Academy (2026): Introduction to Modern AI</div></div>
+    <div class="card"><h3>Strengths</h3>
+      <div class="item"><span>⚡</span>Basic understanding of programming concepts</div>
+      <div class="item"><span>🌱</span>Willingness to learn new technologies</div>
+      <div class="item"><span>🤝</span>Good communication and cooperation</div></div>
+  </div>
+</section>
+<footer>Designed and built by Puvvada Lakshmi Lohitha</footer>
+</main>
+
+<script>
+(function(){
+var d=document,r=d.documentElement;
+/* theme */
+try{var s=localStorage.getItem('pf-theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+d.getElementById('tg').onclick=function(){
+  var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  var n=dark?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('pf-theme',n)}catch(e){}
+};
+/* progress bar + active nav */
+var bar=d.getElementById('bar'),links=[].slice.call(d.querySelectorAll('a.l'));
+addEventListener('scroll',function(){
+  var h=r.scrollHeight-innerHeight;bar.style.width=(scrollY/h*100)+'%';
+  var cur='';d.querySelectorAll('section').forEach(function(x){if(x.getBoundingClientRect().top<innerHeight*.4)cur=x.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+/* typing roles */
+var roles=['full stack developer','machine learning learner','cloud explorer','IoT project builder'],ri=0,ci=0,del=false,t=d.getElementById('typed');
+(function tick(){var w=roles[ri];ci+=del?-1:1;t.textContent=w.slice(0,ci);
+  var sp=del?35:70;if(!del&&ci===w.length){del=true;sp=1600}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;sp=350}
+  setTimeout(tick,sp)})();
+/* profile code card typing */
+var src=[['<span class="k">const</span> lohitha = {',0],
+['  name: <span class="s2">"Puvvada Lakshmi Lohitha"</span>,',0],
+['  degree: <span class="s2">"B.Tech CSE, 2027"</span>,',0],
+['  cgpa: <span class="n">8.24</span>,',0],
+['  languages: [<span class="s2">"Python"</span>, <span class="s2">"C"</span>, <span class="s2">"Java"</span>],',0],
+['  interests: [<span class="s2">"Full Stack"</span>, <span class="s2">"AI/ML"</span>, <span class="s2">"Cloud"</span>, <span class="s2">"IoT"</span>],',0],
+['  internships: <span class="n">3</span>,',0],
+['  learning: <span class="k">true</span>',0],
+['};',0],['<span class="c">// open to new opportunities</span>',0]];
+var pre=d.getElementById('code'),i=0;
+function line(){if(i>=src.length){pre.innerHTML+='<span class="caret"></span>';return}
+  pre.innerHTML+=src[i][0]+'\n';i++;setTimeout(line,260)}
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){pre.innerHTML=src.map(function(x){return x[0]}).join('\n')}else setTimeout(line,500);
+/* reveal + counters + bars */
+function count(el){var n=parseFloat(el.dataset.n),dc=+el.dataset.d||0,st=performance.now();
+  (function f(now){var p=Math.min((now-st)/1400,1),e=1-Math.pow(1-p,3);el.textContent=(n*e).toFixed(dc);if(p<1)requestAnimationFrame(f)})(st)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var x=e.target;x.classList.add('in');
+  x.querySelectorAll('[data-w]').forEach(function(b){b.style.width=b.dataset.w+'%'});
+  x.querySelectorAll('.fg').forEach(function(c){c.style.strokeDashoffset=352*(1-c.dataset.v/10)});io.unobserve(x)})},{threshold:.2});
+d.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('[data-n]').forEach(count);so.unobserve(e.target)}})});
+so.observe(d.querySelector('.stats'));
+/* cursor glow on cards + 3D tilt on project cards */
+d.querySelectorAll('.card').forEach(function(c){
+  c.addEventListener('mousemove',function(e){var b=c.getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top;
+    c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');
+    if(c.classList.contains('tilt')&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+      c.style.transform='perspective(800px) rotateX('+((y/b.height-.5)*-7)+'deg) rotateY('+((x/b.width-.5)*9)+'deg) translateY(-4px)'}});
+  c.addEventListener('mouseleave',function(){if(c.classList.contains('tilt'))c.style.transform=''});
+});
+})();
+</script>
+</body>
+</html>
